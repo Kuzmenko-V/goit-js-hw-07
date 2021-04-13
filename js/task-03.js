@@ -16,11 +16,8 @@ const images = [
   },
 ];
 
-    
-let LiTegsElements = [];
-for (let i = 0; i < images.length; i += 1) {
-    LiTegsElements += `<li class="gallery-item"><img class = "gallery-image" src="${images[i].url}" alt="${images[i].alt}"></li>`;
-}
+const LiTegsElements = images.reduce((temp, value) => temp + `<li class="gallery-item"><img class = "gallery-image" src="${value.url}" alt="${value.alt}"></li>`, []);   
 const UlElement = document.querySelector('#gallery');
 UlElement.insertAdjacentHTML("afterbegin", LiTegsElements);
+
 

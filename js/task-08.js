@@ -17,5 +17,5 @@ function createBoxes(amount) {
 };
 let f = 0;
 refs.numberEL.addEventListener('input', (inputValue) => { f = inputValue.currentTarget.value; });
-refs.btnRenderEL.addEventListener('click', () => { boxesEl.innerHTML = ''; createBoxes(f); });
-refs.btnDestroyEl.addEventListener('click', () => {boxesEl.innerHTML = ''; });
+refs.btnRenderEL.addEventListener('click', () =>  createBoxes(f));
+refs.btnDestroyEl.addEventListener('click', () => {boxesEl.innerHTML = '';});
